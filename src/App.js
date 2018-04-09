@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { InstantSearch, SearchBox, Hits, Pagination } from 'react-instantsearch/dom';
-import { Card } from 'grommet/components/Card';
 
 function Ufficio({ hit }) {
   return <div>{hit._nomeufficio}</div>;
