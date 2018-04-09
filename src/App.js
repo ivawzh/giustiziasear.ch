@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {blueGrey500} from 'material-ui/styles/colors';
+import { blueGrey500 } from 'material-ui/styles/colors';
 
 import AppBar from 'material-ui/AppBar';
 
@@ -14,17 +14,24 @@ import FlatButton from 'material-ui/FlatButton';
 
 import { InstantSearch, SearchBox, Hits, Pagination } from 'react-instantsearch/dom';
 
-// This replaces the textColor value on the palette
-// and then update the keys for each component that depends on it.
-// More on Colors: http://www.material-ui.com/#/customization/colors
-const muiTheme = getMuiTheme({
+const mTheme = getMuiTheme({
   appBar: {
     color: blueGrey500,
   },
 });
 
 function Ufficio({ hit }) {
-  return (<Card>
+  return (<Card style={{ margin: 30 }}>
+    <CardHeader
+      title="URL Avatar"
+      subtitle="Subtitle"
+      avatar="images/jsa-128.jpg"
+    />
+    <CardMedia
+      overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
+    >
+      <img src="images/nature-600-337.jpg" alt="" />
+    </CardMedia>
     <CardTitle title={hit._nomeufficio} subtitle="Card subtitle" />
     <CardText>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -33,13 +40,14 @@ function Ufficio({ hit }) {
       Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
     </CardText>
     <CardActions>
-      <FlatButton label="Dettagli" />
+      <FlatButton label="Action1" />
+      <FlatButton label="Action2" />
     </CardActions>
   </Card>);
 }
 
 const App = () => (
-  <MuiThemeProvider muiTheme={muiTheme}>
+  <MuiThemeProvider muiTheme={mTheme}>
     <AppBar
       title="Giustizia search"
     />
