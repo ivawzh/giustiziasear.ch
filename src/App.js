@@ -3,13 +3,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { InstantSearch, SearchBox, Hits, Pagination } from 'react-instantsearch/dom';
-import Card from 'grommet/components/Card';
+import { Card } from 'grommet/components/Card';
 
 function Ufficio({ hit }) {
   return <div>{hit._nomeufficio}</div>;
 }
 
-const App = () => (
+const GiustiziaApp = () => (
   <div>
     <InstantSearch
       appId="2CVZTW5VOB"
@@ -26,4 +26,4 @@ const App = () => (
   </div>
 );
 
-export default App;
+export default GiustiziaApp;
