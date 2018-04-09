@@ -16,9 +16,7 @@ const GiustiziaApp = () => (
       apiKey="a053bf374d1bac46fd8b15c47cb607c3"
       indexName="uffici"
     >
-      <SearchBox
-        style={{ marginBottom: "20px" }}
-      />
+      <SearchBox />
       <Hits hitComponent={Ufficio}
       />
       <Pagination />
