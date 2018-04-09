@@ -2,7 +2,7 @@
   "name": "giustizia-search",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://manzinello.github.io/giustizia-search",
+  "homepage": "https://manzinello.github.io/giustizia-search",
   "dependencies": {
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
