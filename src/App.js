@@ -3,12 +3,25 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import {blueGrey500} from 'material-ui/styles/colors';
+
 import AppBar from 'material-ui/AppBar';
 
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 
 import { InstantSearch, SearchBox, Hits, Pagination } from 'react-instantsearch/dom';
+
+// This replaces the textColor value on the palette
+// and then update the keys for each component that depends on it.
+// More on Colors: http://www.material-ui.com/#/customization/colors
+const muiTheme = getMuiTheme({
+  appBar: {
+    color: blueGrey500,
+  },
+});
 
 function Ufficio({ hit }) {
   return (<Card>
@@ -26,7 +39,7 @@ function Ufficio({ hit }) {
 }
 
 const App = () => (
-  <MuiThemeProvider>
+  <MuiThemeProvider muiTheme={muiTheme}>
     <AppBar
       title="Giustizia search"
     />
