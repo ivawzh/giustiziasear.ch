@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { InstantSearch, SearchBox, Hits } from 'react-instantsearch/dom';
+import { InstantSearch, SearchBox, Hits, Menu } from 'react-instantsearch/dom';
 
 const App = () => (
   <InstantSearch
