@@ -42,9 +42,14 @@ function Ufficio({ hit }) {
       showExpandableButton={true}
     />
     <CardText expandable={true}>
-      Email: <strong>{hit.email}</strong> <br />
-      Telefono: <strong>{hit.telefono}</strong><br />
-      Sito web: <strong>{hit.sitoweb}</strong><br />
+      Indirizzo <strong>{hit.indirizzo}</strong> - <strong>{hit.cap}</strong>, <strong>{hit.comune}</strong><br />
+      Email <strong>{hit.email}</strong><br />
+      PEC <strong>{hit.pec}</strong><br />
+      Sito web <strong>{hit.sitoweb}</strong><br />
+      Telefono <strong>{hit.telefono}</strong><br />
+      Fax <strong>{hit.fax}</strong><br />
+      Codice fiscale <strong>{hit.codicefiscale}</strong><br />
+      Codice ISTAT <strong>{hit.codiceistat}</strong>
     </CardText>
   </Card>);
 }
