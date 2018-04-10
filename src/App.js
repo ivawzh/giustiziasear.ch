@@ -25,6 +25,7 @@ const mTheme = getMuiTheme({
 const GiustiziaSearchBox = ({ currentRefinement, refine }) =>
 
   <TextField
+    style={searchBoxStyle}
     hintText="Cosa stai cercando?"
     value={currentRefinement}
     onChange={e => refine(e.target.value)}
@@ -63,13 +64,18 @@ const App = () => (
       <ConnectedSearchBox />
       <Hits hitComponent={Ufficio}
       />
-      <Pagination />
     </InstantSearch>
   </MuiThemeProvider>
 );
 
 const cardStyle = {
   margin: 30
+};
+
+const searchBoxStyle = {
+  marginTop: 30,
+  marginLeft: 30,
+  marginRight: 30
 };
 
 export default App;
