@@ -21,35 +21,27 @@ const mTheme = getMuiTheme({
 });
 
 function Ufficio({ hit }) {
-  return (<Card style={{ margin: 30 }}>
+  return (<Card style={cardStyle}>
     <CardHeader
-      title="URL Avatar"
-      subtitle="Subtitle"
-      avatar="images/jsa-128.jpg"
+      title={hit._nomeufficio}
+      subtitle={hit.tipo}
+      actAsExpander={true}
+      showExpandableButton={true}
     />
-    <CardMedia
-      overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-    >
-      <img src="images/nature-600-337.jpg" alt="" />
-    </CardMedia>
-    <CardTitle title={hit._nomeufficio} subtitle="Card subtitle" />
-    <CardText>
+    <CardText expandable={true}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
       Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
       Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
       Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
     </CardText>
-    <CardActions>
-      <FlatButton label="Action1" />
-      <FlatButton label="Action2" />
-    </CardActions>
   </Card>);
 }
 
 const App = () => (
   <MuiThemeProvider muiTheme={mTheme}>
     <AppBar
-      title="Giustizia search"
+      title="giustizia-search"
+      showMenuIconButton={false}
     />
     <InstantSearch
       appId="2CVZTW5VOB"
@@ -63,5 +55,9 @@ const App = () => (
     </InstantSearch>
   </MuiThemeProvider>
 );
+
+const cardStyle = {
+  margin: 30
+};
 
 export default App;
