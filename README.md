@@ -1,7 +1,5 @@
-# giustizia-search
-https://manzinello.github.io/giustizia-search/
-
-[![NPM](https://nodei.co/npm/giustizia.png?mini=true)](https://nodei.co/npm/giustizia/)
+# ⚖️ giustizia-search
+http://giustiziasear.ch
 
 ~ made with ❤️, [React], [Material Design] and [Algolia] by [Matteo Manzinello]
 
