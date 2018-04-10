@@ -74,7 +74,7 @@ const App = () => (
       indexName={UFFICI}
     >
       <GiustiziaConnectedSearchBox />
-      <InfiniteHits hitComponent={Ufficio}
+      <Hits hitComponent={Ufficio}
       />
       <PoweredBy style={searchBoxStyle} />
     </InstantSearch>
