@@ -3,6 +3,6 @@
   "name": "Il motore di ricerca per gli Uffici della Giustizia Italiana",
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#607d8b",
   "background_color": "#ffffff"
 }
