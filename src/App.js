@@ -13,12 +13,24 @@ import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'm
 import FlatButton from 'material-ui/FlatButton';
 
 import { InstantSearch, SearchBox, Hits, Pagination } from 'react-instantsearch/dom';
+import TextField from 'material-ui/TextField';
+import { connectSearchBox } from 'react-instantsearch/connectors';
 
 const mTheme = getMuiTheme({
   appBar: {
     color: blueGrey500,
   },
 });
+
+const GiustiziaSearchBox = ({ currentRefinement, refine }) =>
+
+  <TextField
+    hintText="Cosa stai cercando?"
+    value={currentRefinement}
+    onChange={e => refine(e.target.value)}
+  />
+
+const ConnectedSearchBox = connectSearchBox(GiustiziaSearchBox);
 
 function Ufficio({ hit }) {
   return (<Card style={cardStyle}>
@@ -48,7 +60,7 @@ const App = () => (
       apiKey="a053bf374d1bac46fd8b15c47cb607c3"
       indexName="uffici"
     >
-      <SearchBox />
+      <ConnectedSearchBox />
       <Hits hitComponent={Ufficio}
       />
       <Pagination />
