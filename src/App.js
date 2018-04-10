@@ -3,18 +3,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { blueGrey500 } from 'material-ui/styles/colors';
 
 import AppBar from 'material-ui/AppBar';
-
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import TextField from 'material-ui/TextField';
 
 import { InstantSearch, SearchBox, Hits, Pagination, InfiniteHits, PoweredBy } from 'react-instantsearch/dom';
-import TextField from 'material-ui/TextField';
 import { connectSearchBox } from 'react-instantsearch/connectors';
+
+const GIUSTIZIA_SEARCH = "giustizia-search";
+const APP_ID = "2CVZTW5VOB";
+const API_KEY = "a053bf374d1bac46fd8b15c47cb607c3";
+const UFFICI = "uffici";
 
 const mTheme = getMuiTheme({
   appBar: {
@@ -23,14 +26,12 @@ const mTheme = getMuiTheme({
 });
 
 const GiustiziaSearchBox = ({ currentRefinement, refine }) =>
-
   <TextField
     style={searchBoxStyle}
     hintText="Cosa stai cercando?"
     value={currentRefinement}
     onChange={e => refine(e.target.value)}
   />
-
 const ConnectedSearchBox = connectSearchBox(GiustiziaSearchBox);
 
 function Ufficio({ hit }) {
@@ -52,18 +53,18 @@ function Ufficio({ hit }) {
       Codice ISTAT <strong>{hit.codiceistat}</strong>
     </CardText>
   </Card>);
-}
+};
 
 const App = () => (
   <MuiThemeProvider muiTheme={mTheme}>
     <AppBar
-      title="giustizia-search"
+      title={GIUSTIZIA_SEARCH}
       showMenuIconButton={false}
     />
     <InstantSearch
-      appId="2CVZTW5VOB"
-      apiKey="a053bf374d1bac46fd8b15c47cb607c3"
-      indexName="uffici"
+      appId={APP_ID}
+      apiKey={API_KEY}
+      indexName={UFFICI}
     >
       <ConnectedSearchBox />
       <InfiniteHits hitComponent={Ufficio}
