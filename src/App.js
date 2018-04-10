@@ -32,7 +32,6 @@ const GiustiziaSearchBox = ({ currentRefinement, refine }) =>
     style={searchBoxStyle}
     floatingLabelText="Cosa stai cercando?"
     floatingLabelFixed={true}
-    fullWidth={true}
     value={currentRefinement}
     onChange={e => refine(e.target.value)}
   />
