@@ -12,14 +12,14 @@ import AppBar from 'material-ui/AppBar';
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 
-import { InstantSearch, SearchBox, Hits, Pagination } from 'react-instantsearch/dom';
+import { InstantSearch, SearchBox, Hits, Pagination, InfiniteHits, PoweredBy } from 'react-instantsearch/dom';
 import TextField from 'material-ui/TextField';
 import { connectSearchBox } from 'react-instantsearch/connectors';
 
 const mTheme = getMuiTheme({
   appBar: {
     color: blueGrey500,
-  },
+  }
 });
 
 const GiustiziaSearchBox = ({ currentRefinement, refine }) =>
@@ -42,10 +42,9 @@ function Ufficio({ hit }) {
       showExpandableButton={true}
     />
     <CardText expandable={true}>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-      Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-      Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+      Email: {hit.email} <br />
+      Telefono: {hit.telefono}<br />
+      Sito web: {hit.sitoweb}<br />
     </CardText>
   </Card>);
 }
@@ -62,8 +61,9 @@ const App = () => (
       indexName="uffici"
     >
       <ConnectedSearchBox />
-      <Hits hitComponent={Ufficio}
+      <InfiniteHits hitComponent={Ufficio}
       />
+      <PoweredBy style={searchBoxStyle} />
     </InstantSearch>
   </MuiThemeProvider>
 );
