@@ -2,6 +2,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './App.css';
+
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { blueGrey500 } from 'material-ui/styles/colors';
@@ -34,6 +36,10 @@ const GiustiziaSearchBox = ({ currentRefinement, refine }) =>
   />
 const ConnectedSearchBox = connectSearchBox(GiustiziaSearchBox);
 
+function toHide(string) {
+  return string === "";
+}
+
 function Ufficio({ hit }) {
   return (<Card style={cardStyle}>
     <CardHeader
@@ -43,16 +49,16 @@ function Ufficio({ hit }) {
       showExpandableButton={true}
     />
     <CardText expandable={true}>
-      Indirizzo <strong>{hit.indirizzo}</strong> - <strong>{hit.cap}</strong>, <strong>{hit.comune}</strong><br />
-      Email <strong>{hit.email}</strong><br />
-      PEC <strong>{hit.pec}</strong><br />
-      Sito web <strong>{hit.sitoweb}</strong><br />
-      Telefono <strong>{hit.telefono}</strong><br />
-      Fax <strong>{hit.fax}</strong><br />
-      Codice fiscale <strong>{hit.codicefiscale}</strong><br />
-      Codice ISTAT <strong>{hit.codiceistat}</strong>
+      <p className={toHide(hit.indirizzo) ? 'hidden' : ''}>indirizzo <strong>{hit.indirizzo}</strong> - <strong>{hit.cap}</strong>, <strong>{hit.comune}</strong></p>
+      <p className={toHide(hit.email) ? 'hidden' : ''}>email <strong>{hit.email}</strong></p>
+      <p className={toHide(hit.pec) ? 'hidden' : ''}>PEC <strong>{hit.pec}</strong></p>
+      <p className={toHide(hit.sitoweb) ? 'hidden' : ''}>sito web <strong>{hit.sitoweb}</strong></p>
+      <p className={toHide(hit.telefono) ? 'hidden' : ''}>telefono <strong>{hit.telefono}</strong></p>
+      <p className={toHide(hit.fax) ? 'hidden' : ''}>fax <strong>{hit.fax}</strong></p>
+      <p className={toHide(hit.codicefiscale) ? 'hidden' : ''}>codice fiscale <strong>{hit.codicefiscale}</strong></p>
+      <p className={toHide(hit.codiceistat) ? 'hidden' : ''}>codice ISTAT <strong>{hit.codiceistat}</strong></p>
     </CardText>
-  </Card>);
+  </Card >);
 };
 
 const App = () => (
