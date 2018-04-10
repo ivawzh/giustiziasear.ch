@@ -30,11 +30,13 @@ const mTheme = getMuiTheme({
 const GiustiziaSearchBox = ({ currentRefinement, refine }) =>
   <TextField
     style={searchBoxStyle}
-    hintText="Cosa stai cercando?"
+    floatingLabelText="Cosa stai cercando?"
+    floatingLabelFixed={true}
+    fullWidth={true}
     value={currentRefinement}
     onChange={e => refine(e.target.value)}
   />
-const ConnectedSearchBox = connectSearchBox(GiustiziaSearchBox);
+const GiustiziaConnectedSearchBox = connectSearchBox(GiustiziaSearchBox);
 
 function toHide(string) {
   return string === "";
@@ -72,7 +74,7 @@ const App = () => (
       apiKey={API_KEY}
       indexName={UFFICI}
     >
-      <ConnectedSearchBox />
+      <GiustiziaConnectedSearchBox />
       <InfiniteHits hitComponent={Ufficio}
       />
       <PoweredBy style={searchBoxStyle} />
