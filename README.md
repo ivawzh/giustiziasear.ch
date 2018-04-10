@@ -1,4 +1,5 @@
 # ⚖️ giustizia-search
+
 http://giustiziasear.ch
 
 ~ made with ❤️, [React], [Material Design] and [Algolia] by [Matteo Manzinello]
