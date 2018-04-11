@@ -78,6 +78,7 @@ const App = () => (
       />
       <PoweredBy style={searchBoxStyle} />
     </InstantSearch>
+    <p style={cardStyle}>a <a href="https://matteomanzinello.com" target="_blank">matteo manzinello</a> project</p>
   </MuiThemeProvider>
 );
 
