@@ -1,4 +1,4 @@
-# ⚖️ giustizia-search
+# ⚖️ giustiziasear.ch
 
 https://giustiziasear.ch
 
