@@ -16,7 +16,7 @@ import TextField from 'material-ui/TextField';
 import { InstantSearch, SearchBox, Hits, Pagination, InfiniteHits, PoweredBy } from 'react-instantsearch/dom';
 import { connectSearchBox } from 'react-instantsearch/connectors';
 
-const GIUSTIZIA_SEARCH = "giustizia-search";
+const GIUSTIZIA_SEARCH = "giustiziasear.ch";
 const APP_ID = "2CVZTW5VOB";
 const API_KEY = "a053bf374d1bac46fd8b15c47cb607c3";
 const UFFICI = "uffici";
@@ -86,6 +86,7 @@ const cardStyle = {
 };
 
 const searchBoxStyle = {
+  width: "50%",
   marginTop: 30,
   marginLeft: 30,
   marginRight: 30
