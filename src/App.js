@@ -50,8 +50,8 @@ function Ufficio({ hit }) {
     />
     <CardText expandable={true}>
       <p className={toHide(hit.indirizzo) ? 'hidden' : ''}>indirizzo <strong>{hit.indirizzo}</strong> - <strong>{hit.cap}</strong>, <strong>{hit.comune}</strong></p>
-      <p className={toHide(hit.email) ? 'hidden' : ''}>email <strong>{hit.email}</strong></p>
-      <p className={toHide(hit.pec) ? 'hidden' : ''}>PEC <strong>{hit.pec}</strong></p>
+      <p className={toHide(hit.email) ? 'hidden' : ''}>email <a href={'mailto:' + hit.email}><strong>{hit.email}</strong></a></p>
+      <p className={toHide(hit.pec) ? 'hidden' : ''}>PEC <a href={'mailto:' + hit.pec}><strong>{hit.pec}</strong></a></p>
       <p className={toHide(hit.sitoweb) ? 'hidden' : ''}>sito web <strong>{hit.sitoweb}</strong></p>
       <p className={toHide(hit.telefono) ? 'hidden' : ''}>telefono <strong>{hit.telefono}</strong></p>
       <p className={toHide(hit.fax) ? 'hidden' : ''}>fax <strong>{hit.fax}</strong></p>
