@@ -1,6 +1,5 @@
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import './App.css';
 
@@ -13,7 +12,7 @@ import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'm
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 
-import { InstantSearch, SearchBox, Hits, Pagination, InfiniteHits, PoweredBy } from 'react-instantsearch/dom';
+import { InstantSearch, Hits, Pagination, InfiniteHits, PoweredBy } from 'react-instantsearch/dom';
 import { connectSearchBox } from 'react-instantsearch/connectors';
 
 const GIUSTIZIA_SEARCH = "giustiziasear.ch";
@@ -31,7 +30,7 @@ const GiustiziaSearchBox = ({ currentRefinement, refine }) =>
   <TextField
     style={searchBoxStyle}
     floatingLabelText="Cosa stai cercando?"
-    floatingLabelFixed={true}
+    floatingLabelFixed={false}
     value={currentRefinement}
     onChange={e => refine(e.target.value)}
   />
