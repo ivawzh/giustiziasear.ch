@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "https://giustiziasear.ch",
   "dependencies": {
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "react-instantsearch": "^5.0.3",
     "react-scripts": "1.1.4"
   },
