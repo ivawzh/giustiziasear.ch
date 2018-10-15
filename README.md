@@ -4,7 +4,7 @@ https://giustiziasear.ch
 
 ~ made with ❤️, [React], [Material Design] and [Algolia] by [Matteo Manzinello]
 
-[React]: https://reactjs.org/
-[Material Design]: https://material.io/guidelines/
-[Algolia]: https://www.algolia.com/
-[Matteo Manzinello]: https://matteomanzinello.com
+[react]: https://reactjs.org/
+[material design]: https://material.io/guidelines/
+[algolia]: https://www.algolia.com/
+[matteo manzinello]: https://matteomanzinello.com
